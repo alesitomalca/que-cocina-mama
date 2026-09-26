@@ -1033,6 +1033,10 @@ function mostrarEstadoVotantes(
         {
             nombre: "Mery",
             emoji: "👩"
+        },
+        {
+            nombre: "Papá",
+            emoji: "👨‍🦳"
         }
     ];
 
