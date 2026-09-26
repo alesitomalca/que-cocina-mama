@@ -860,7 +860,7 @@ function mostrarResultados(
 
 
     totalVotos.textContent =
-        `${cantidadTotal} de 2 ${
+        `${cantidadTotal} de 3 ${
             cantidadTotal === 1
                 ? "ha votado"
                 : "han votado"
