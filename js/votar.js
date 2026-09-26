@@ -82,7 +82,6 @@ document
                     personaActual;
 
 
-                emojiPersonaActual.textContent =
                     if (personaActual === "Mery") {
 
                         emojiPersonaActual.textContent = "👩";
