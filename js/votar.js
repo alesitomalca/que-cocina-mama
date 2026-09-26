@@ -83,9 +83,19 @@ document
 
 
                 emojiPersonaActual.textContent =
-                    personaActual === "Mery"
-                        ? "👩"
-                        : "👨";
+                    if (personaActual === "Mery") {
+
+                        emojiPersonaActual.textContent = "👩";
+                    
+                    } else if (personaActual === "Papá") {
+                    
+                        emojiPersonaActual.textContent = "👨‍🦳";
+                        
+                        } else {
+                        
+                            emojiPersonaActual.textContent = "👨";
+                                
+                                }
 
 
                 seccionPersona
