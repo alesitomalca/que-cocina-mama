@@ -1,0 +1,2169 @@
+/* ============================= */
+/* CONFIGURACIÓN GENERAL         */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6f8fc,
+            #eef3f9
+        );
+
+    color: #303642;
+
+    min-height: 100vh;
+}
+
+
+/* ============================= */
+/* PANTALLA DE INICIO            */
+/* ============================= */
+
+.inicio {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+.inicio-card {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    background: white;
+
+    padding: 45px 35px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 45px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+.icono-principal {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+}
+
+
+h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.subtitulo {
+
+    color: #777;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* ============================= */
+/* BOTONES DEL INICIO            */
+/* ============================= */
+
+.opciones {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+.boton {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    text-decoration: none;
+
+    border-radius: 15px;
+
+    transition: 0.2s;
+
+    text-align: left;
+
+}
+
+
+.boton span {
+
+    font-size: 35px;
+
+}
+
+
+.boton strong {
+
+    display: block;
+
+    font-size: 18px;
+
+}
+
+
+.boton small {
+
+    display: block;
+
+    margin-top: 3px;
+
+}
+
+
+.mama {
+
+    background: #e8f2ff;
+
+    color: #234b78;
+
+}
+
+
+.hijo {
+
+    background: #edf8f2;
+
+    color: #286044;
+
+}
+
+
+.boton:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* ============================= */
+/* FORMULARIOS                   */
+/* ============================= */
+
+.formulario {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.campo {
+
+    text-align: left;
+
+}
+
+
+.campo label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: 600;
+
+    color: #344054;
+
+}
+
+
+.campo input {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border:
+        1px solid
+        #d0d5dd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.2s;
+
+}
+
+
+.campo input:focus {
+
+    border-color: #7caee6;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(124, 174, 230, 0.15);
+
+}
+
+
+/* ============================= */
+/* BOTÓN PRINCIPAL               */
+/* ============================= */
+
+.btn-principal {
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #3d73ad;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-principal:hover {
+
+    background: #315f91;
+
+    transform: translateY(-2px);
+
+}
+
+
+.btn-principal:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+/* ============================= */
+/* LOGIN                         */
+/* ============================= */
+
+#mensajeLogin {
+
+    margin-top: 17px;
+
+    min-height: 20px;
+
+    font-size: 14px;
+
+}
+
+
+.volver {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #667085;
+
+    text-decoration: none;
+
+}
+
+
+.volver:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ============================= */
+/* PANEL                         */
+/* ============================= */
+
+.panel {
+
+    min-height: 100vh;
+
+    padding: 40px 20px;
+
+}
+
+
+.panel-contenedor {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+
+.panel-header {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.06);
+
+}
+
+
+.panel-header h1 {
+
+    margin-bottom: 8px;
+
+}
+
+
+.panel-header p {
+
+    color: #667085;
+
+}
+
+
+.panel-mini {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #3d73ad !important;
+
+    margin-bottom: 8px;
+
+}
+
+
+.panel-seccion {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.06);
+
+}
+
+
+.panel-seccion h2 {
+
+    margin-bottom: 8px;
+
+}
+
+
+.panel-seccion > p {
+
+    color: #667085;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ============================= */
+/* ESTADO VACÍO                  */
+/* ============================= */
+
+.estado-vacio {
+
+    text-align: center;
+
+    padding: 45px 20px;
+
+    border:
+        2px dashed
+        #d8dee8;
+
+    border-radius: 15px;
+
+    color: #667085;
+
+}
+
+
+.estado-vacio span {
+
+    display: block;
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.estado-vacio h3 {
+
+    color: #344054;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* ============================= */
+/* BOTONES PANEL                 */
+/* ============================= */
+
+.btn-agregar {
+
+    margin-top: 20px;
+
+}
+
+
+.btn-secundario {
+
+    padding: 12px 18px;
+
+    border:
+        1px solid
+        #d0d5dd;
+
+    background: white;
+
+    color: #344054;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-secundario:hover {
+
+    background: #f2f4f7;
+
+}
+
+
+/* ============================= */
+/* RESPONSIVE                    */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .inicio-card {
+
+        padding:
+            35px
+            22px;
+
+    }
+
+
+    h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .boton {
+
+        padding: 18px;
+
+    }
+
+
+    .panel {
+
+        padding:
+            20px
+            15px;
+
+    }
+
+
+    .panel-header {
+
+        padding: 22px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .panel-seccion {
+
+        padding: 22px;
+
+    }
+
+
+    .btn-secundario {
+
+        width: 100%;
+
+    }
+
+}
+
+/* ============================= */
+/* ADMINISTRACIÓN DE PLATOS      */
+/* ============================= */
+
+.titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.titulo-seccion p {
+    color: #667085;
+    margin-top: 5px;
+}
+
+.btn-nuevo {
+    width: auto;
+    min-width: 170px;
+}
+
+
+/* FORMULARIO */
+
+.form-plato-contenedor {
+    background: #f8fafc;
+    border: 1px solid #e4e7ec;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.form-plato-contenedor h3 {
+    margin-bottom: 20px;
+}
+
+.form-plato-contenedor .campo {
+    margin-bottom: 18px;
+}
+
+.campo textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    outline: none;
+}
+
+.campo textarea:focus {
+    border-color: #7caee6;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(124, 174, 230, 0.15);
+}
+
+.acciones-formulario {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.acciones-formulario .btn-principal {
+    width: auto;
+}
+
+#mensajePlato {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+/* ============================= */
+/* TARJETAS DE PLATOS            */
+/* ============================= */
+
+#listaPlatos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tarjeta-plato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px;
+
+    border: 1px solid #e4e7ec;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    transition: 0.2s;
+}
+
+.tarjeta-plato:hover {
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.05);
+}
+
+.plato-informacion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    min-width: 0;
+}
+
+.plato-icono {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f2f4f7;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+}
+
+.plato-informacion h3 {
+    margin-bottom: 4px;
+}
+
+.plato-informacion p {
+    color: #667085;
+    font-size: 14px;
+}
+
+
+/* BOTONES EDITAR / ELIMINAR */
+
+.acciones-plato {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-editar,
+.btn-eliminar {
+    border: none;
+    border-radius: 9px;
+
+    padding: 10px 14px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-editar {
+    background: #edf4ff;
+    color: #315f91;
+}
+
+.btn-editar:hover {
+    background: #dbeafe;
+}
+
+.btn-eliminar {
+    background: #fff0f0;
+    color: #b42318;
+}
+
+.btn-eliminar:hover {
+    background: #fee4e2;
+}
+
+.btn-eliminar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ============================= */
+/* MODAL                         */
+/* ============================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(16, 24, 40, 0.55);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.modal-contenido {
+    width: 100%;
+    max-width: 420px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.18);
+}
+
+.modal-icono {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.modal-contenido h2 {
+    margin-bottom: 10px;
+}
+
+.modal-contenido p {
+    color: #667085;
+    line-height: 1.5;
+}
+
+.modal-advertencia {
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.modal-botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.modal-botones button {
+    flex: 1;
+}
+
+
+/* MUY IMPORTANTE */
+
+.oculto {
+    display: none !important;
+}
+
+
+/* ============================= */
+/* RESPONSIVE PLATOS             */
+/* ============================= */
+
+@media (max-width: 650px) {
+
+    .titulo-seccion {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-nuevo {
+        width: 100%;
+    }
+
+    .tarjeta-plato {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .acciones-plato {
+        width: 100%;
+    }
+
+    .btn-editar,
+    .btn-eliminar {
+        flex: 1;
+        min-height: 46px;
+        font-size: 15px;
+    }
+
+    .acciones-formulario {
+        flex-direction: column-reverse;
+    }
+
+    .acciones-formulario button,
+    .acciones-formulario .btn-principal {
+        width: 100%;
+    }
+
+}
+
+/* ========================================= */
+/* SECCIÓN VOTACIÓN                          */
+/* ========================================= */
+
+.seccion-votacion {
+    margin-top: 25px;
+}
+
+
+.cabecera-votacion {
+    margin-bottom: 25px;
+}
+
+
+.cabecera-votacion h2 {
+    margin-bottom: 5px;
+}
+
+
+.cabecera-votacion p {
+    color: #667085;
+}
+
+
+/* SELECTOR */
+
+.selector-platos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.opcion-votacion {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 17px;
+
+    border:
+        1px solid
+        #e4e7ec;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    background: white;
+}
+
+
+.opcion-votacion:hover {
+    border-color: #98a2b3;
+
+    background: #f9fafb;
+}
+
+
+.opcion-votacion:has(
+    input:checked
+) {
+    border-color: #3d73ad;
+
+    background: #edf4ff;
+}
+
+
+.checkbox-plato {
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+
+    accent-color: #3d73ad;
+
+    flex-shrink: 0;
+}
+
+
+.opcion-votacion strong {
+    display: block;
+
+    color: #344054;
+
+    margin-bottom: 3px;
+}
+
+
+.opcion-votacion small {
+    display: block;
+
+    color: #667085;
+}
+
+
+/* INICIAR */
+
+.btn-iniciar-votacion {
+    width: 100%;
+
+    padding: 17px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #286044;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-iniciar-votacion:hover:not(
+    :disabled
+) {
+    background: #1f5037;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.btn-iniciar-votacion:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+}
+
+
+#mensajeVotacion {
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+}
+
+
+/* VOTACIÓN ACTIVA */
+
+.votacion-activa {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    padding: 17px;
+
+    background: #ecfdf3;
+
+    border:
+        1px solid
+        #abefc6;
+
+    border-radius: 13px;
+}
+
+
+.votacion-activa-icono {
+    font-size: 25px;
+}
+
+
+.votacion-activa strong {
+    color: #05603a;
+}
+
+
+.votacion-activa p {
+    color: #39745b;
+
+    margin-top: 3px;
+
+    font-size: 14px;
+}
+
+/* ========================================= */
+/* VOTACIÓN DE HIJOS                         */
+/* ========================================= */
+
+.lista-votacion {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    margin-top: 20px;
+}
+
+
+.votacion-disponible {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 16px 18px;
+
+    background: #ecfdf3;
+
+    border: 1px solid #abefc6;
+
+    border-radius: 13px;
+}
+
+
+.votacion-disponible span {
+    font-size: 23px;
+}
+
+
+.votacion-disponible strong {
+    color: #05603a;
+}
+
+
+.votacion-disponible p {
+    color: #39745b;
+
+    margin-top: 3px;
+
+    font-size: 14px;
+}
+
+
+/* TARJETA PARA VOTAR */
+
+.tarjeta-voto {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid #e4e7ec;
+
+    border-radius: 15px;
+
+    transition: 0.2s;
+}
+
+
+.tarjeta-voto:hover {
+    border-color: #b2c5dc;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+.info-voto {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.icono-voto {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #f2f4f7;
+
+    font-size: 25px;
+}
+
+
+.info-voto h3 {
+    margin-bottom: 4px;
+}
+
+
+.info-voto p {
+    color: #667085;
+
+    font-size: 14px;
+}
+
+
+.btn-votar {
+    min-width: 105px;
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #286044;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-votar:hover {
+    background: #1f5037;
+
+    transform: translateY(-2px);
+}
+
+
+/* CONFIRMAR */
+
+.plato-confirmacion {
+    margin-top: 15px;
+
+    padding: 14px;
+
+    background: #f2f4f7;
+
+    border-radius: 10px;
+}
+
+
+.btn-confirmar-voto {
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 13px 18px;
+
+    background: #286044;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.btn-confirmar-voto:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* VOTO REALIZADO */
+
+.voto-realizado {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background: #ecfdf3;
+
+    border: 1px solid #abefc6;
+
+    border-radius: 14px;
+}
+
+
+.check-voto {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #12b76a;
+
+    color: white;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+
+.voto-realizado strong {
+    color: #05603a;
+}
+
+
+.voto-realizado p {
+    margin-top: 4px;
+
+    color: #39745b;
+}
+
+
+/* ========================================= */
+/* RESULTADOS                                */
+/* ========================================= */
+
+.resultados-contenedor {
+    margin-top: 30px;
+}
+
+
+.separador {
+    height: 1px;
+
+    background: #e4e7ec;
+
+    margin-bottom: 30px;
+}
+
+
+.titulo-resultados {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.total-votos {
+    padding: 8px 13px;
+
+    background: #f2f4f7;
+
+    border-radius: 20px;
+
+    color: #475467;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.resultado-plato {
+    margin-bottom: 22px;
+}
+
+
+.resultado-cabecera {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 8px;
+}
+
+
+.resultado-cabecera span {
+    color: #667085;
+
+    font-size: 14px;
+}
+
+
+.barra-votos {
+    width: 100%;
+
+    height: 10px;
+
+    overflow: hidden;
+
+    background: #eaecf0;
+
+    border-radius: 20px;
+}
+
+
+.progreso-votos {
+    height: 100%;
+
+    min-width: 0;
+
+    background: #3d73ad;
+
+    border-radius: 20px;
+
+    transition: width 0.5s ease;
+}
+
+
+.resultado-plato small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #98a2b3;
+
+    font-size: 12px;
+
+    text-align: right;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .tarjeta-voto {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .btn-votar {
+        width: 100%;
+
+        min-height: 48px;
+
+        font-size: 16px;
+    }
+
+
+    .titulo-resultados {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+/* ============================= */
+/* CONTROL DE VOTACIÓN MAMÁ      */
+/* ============================= */
+
+.control-votacion {
+    margin-top: 30px;
+}
+
+
+.btn-cerrar-votacion {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #344054;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-cerrar-votacion:hover {
+    background: #1d2939;
+
+    transform: translateY(-2px);
+}
+
+
+.btn-cerrar-votacion:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* RESULTADO */
+
+.resultado-final {
+    margin-top: 30px;
+}
+
+
+.ganador-final,
+.empate-final {
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background: #f8fafc;
+
+    border: 1px solid #e4e7ec;
+
+    border-radius: 18px;
+}
+
+
+.trofeo {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+.ganador-final h2,
+.empate-final h2 {
+    font-size: 30px;
+
+    margin: 8px 0;
+}
+
+
+.mensaje-comida {
+    margin-top: 20px;
+
+    padding: 13px;
+
+    background: #ecfdf3;
+
+    color: #05603a;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+}
+
+
+/* EMPATE */
+
+.lista-empatados {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    margin: 20px 0;
+}
+
+
+.plato-empatado {
+    padding: 13px;
+
+    background: white;
+
+    border: 1px solid #e4e7ec;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+}
+
+
+/* SORTEO */
+
+.btn-sorteo {
+    width: 100%;
+
+    padding: 17px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #3d73ad;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-sorteo:hover {
+    transform: translateY(-2px);
+
+    background: #315f91;
+}
+
+
+.btn-sorteo:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+.pantalla-sorteo {
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background: white;
+
+    border: 2px solid #e4e7ec;
+
+    border-radius: 14px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+/* ============================= */
+/* NUEVA VOTACIÓN                */
+/* ============================= */
+
+.btn-nueva-votacion {
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #286044;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-nueva-votacion:hover {
+
+    background: #1f5037;
+
+    transform: translateY(-2px);
+
+}
+
+/* ============================= */
+/* RESULTADO PARA LOS HIJOS      */
+/* ============================= */
+
+.resultado-hijos {
+
+    text-align: center;
+
+    padding: 40px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafc
+        );
+
+    border:
+        1px solid
+        #e4e7ec;
+
+    border-radius: 18px;
+
+}
+
+
+.resultado-hijos-icono {
+
+    font-size: 65px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.resultado-hijos h2 {
+
+    font-size: 34px;
+
+    color: #1d2939;
+
+    margin: 8px 0;
+
+}
+
+
+.ganador-etiqueta {
+
+    color: #667085;
+
+    margin-top: 10px;
+
+}
+
+/* ============================= */
+/* ESPERANDO SORTEO              */
+/* ============================= */
+
+.esperando-sorteo {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 20px;
+
+}
+
+
+.esperando-sorteo span {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #3d73ad;
+
+    animation:
+        esperandoSorteo
+        1.2s
+        infinite ease-in-out;
+
+}
+
+
+.esperando-sorteo span:nth-child(2) {
+
+    animation-delay: 0.15s;
+
+}
+
+
+.esperando-sorteo span:nth-child(3) {
+
+    animation-delay: 0.30s;
+
+}
+
+
+@keyframes esperandoSorteo {
+
+    0%,
+    60%,
+    100% {
+
+        transform:
+            translateY(0);
+
+        opacity: 0.4;
+
+    }
+
+
+    30% {
+
+        transform:
+            translateY(-7px);
+
+        opacity: 1;
+
+    }
+
+}
+
+/* ========================================= */
+/* SELECCIÓN DE HIJO                         */
+/* ========================================= */
+
+.seleccion-persona {
+    text-align: center;
+}
+
+.seleccion-persona h2 {
+    margin-bottom: 7px;
+}
+
+.seleccion-persona > p:not(.panel-mini) {
+    color: #667085;
+    margin-bottom: 25px;
+}
+
+
+.personas-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+.tarjeta-persona {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 155px;
+
+    padding: 22px;
+
+    border: 1px solid #e4e7ec;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.tarjeta-persona:hover {
+    border-color: #8fb4dc;
+
+    background: #f8fbff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+.persona-emoji {
+    font-size: 42px;
+}
+
+
+.tarjeta-persona strong {
+    font-size: 18px;
+
+    color: #344054;
+}
+
+
+.tarjeta-persona small {
+    color: #667085;
+}
+
+
+/* ========================================= */
+/* PERSONA ACTUAL                            */
+/* ========================================= */
+
+.hijo-seleccionado {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 16px;
+
+    margin-bottom: 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e4e7ec;
+
+    border-radius: 13px;
+}
+
+
+.hijo-seleccionado > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+#emojiPersonaActual {
+    font-size: 28px;
+}
+
+
+.hijo-seleccionado small {
+    display: block;
+
+    color: #667085;
+
+    margin-bottom: 2px;
+}
+
+
+.hijo-seleccionado strong {
+    display: block;
+
+    color: #344054;
+}
+
+
+@media (max-width: 550px) {
+
+    .personas-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .tarjeta-persona {
+        min-height: 125px;
+    }
+
+
+    .hijo-seleccionado {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .hijo-seleccionado .btn-secundario {
+        width: 100%;
+    }
+
+}
+
+/* ========================================= */
+/* ESTADO DE VOTANTES                        */
+/* ========================================= */
+
+.estado-familia {
+    margin: 20px 0 28px;
+
+    padding: 18px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e4e7ec;
+
+    border-radius: 14px;
+}
+
+
+#estadoVotantes {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+
+.estado-votante {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 12px 14px;
+
+    background: white;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 10px;
+}
+
+
+.estado-votante > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.estado-votante > div span {
+    font-size: 21px;
+}
+
+
+.ya-voto {
+    color: #067647;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+
+.falta-votar {
+    color: #b54708;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+
+@media (max-width: 450px) {
+
+    .estado-votante {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+/* ========================================= */
+/* SORTEO EN VIVO - HIJOS                    */
+/* ========================================= */
+
+.sorteo-en-vivo {
+    overflow: hidden;
+}
+
+
+.plato-sorteo-hijos {
+
+    margin: 25px 0;
+
+    padding: 22px 15px;
+
+    background: white;
+
+    border: 2px solid #dbe7f3;
+
+    border-radius: 16px;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    color: #344054;
+
+    animation:
+        aparecerPlatoSorteo
+        0.18s ease;
+}
+
+
+.texto-sorteando {
+
+    color: #667085;
+
+    font-size: 14px;
+
+}
+
+
+@keyframes aparecerPlatoSorteo {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.92);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Acceso de mamá</title>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="inicio">
+
+        <div class="inicio-card">
+
+            <div class="icono-principal">
+                👩‍🍳
+            </div>
+
+
+            <h1>
+                Acceso de mamá
+            </h1>
+
+
+            <p class="subtitulo">
+                Ingresa para administrar los platos
+            </p>
+
+
+            <form
+                id="formLogin"
+                class="formulario"
+            >
+
+
+                <!-- CORREO -->
+
+                <div class="campo">
+
+                    <label for="correo">
+                        Correo
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        placeholder="Ingresa tu correo"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CONTRASEÑA -->
+
+                <div class="campo">
+
+                    <label for="password">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Ingresa tu contraseña"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- BOTÓN -->
+
+                <button
+                    type="submit"
+                    class="btn-principal"
+                    id="btnLogin"
+                >
+
+                    Iniciar sesión
+
+                </button>
+
+
+            </form>
+
+
+            <!-- MENSAJES -->
+
+            <p id="mensajeLogin"></p>
+
+
+            <!-- VOLVER -->
+
+            <a
+                href="index.html"
+                class="volver"
+            >
+
+                ← Volver al inicio
+
+            </a>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- SUPABASE -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+    <!-- NUESTRA CONFIGURACIÓN -->
+
+    <script src="js/supabase.js"></script>
+
+
+    <!-- LOGIN -->
+
+    <script src="js/login.js"></script>
+
+
+</body>
+
+</html>

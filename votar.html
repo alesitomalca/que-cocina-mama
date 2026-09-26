@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Votación familiar</title>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+</head>
+
+<body>
+
+<main class="panel">
+
+    <div class="panel-contenedor">
+
+        <!-- CABECERA -->
+
+        <div class="panel-header">
+
+            <div>
+
+                <p class="panel-mini">
+                    VOTACIÓN FAMILIAR
+                </p>
+
+                <h1>
+                    🍴 ¿Qué quieres comer?
+                </h1>
+
+                <p>
+                    Elige quién eres y vota por un solo plato.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SELECCIÓN DE PERSONA -->
+
+        <section
+            id="seccionPersona"
+            class="panel-seccion"
+        >
+
+            <div class="seleccion-persona">
+
+                <p class="panel-mini">
+                    PRIMERO
+                </p>
+
+                <h2>
+                    ¿Quién eres?
+                </h2>
+
+                <p>
+                    Selecciona tu nombre para continuar.
+                </p>
+
+
+                <div class="personas-grid">
+
+                    <button
+                        class="tarjeta-persona"
+                        data-persona="Alessandro"
+                    >
+
+                        <span class="persona-emoji">
+                            👨
+                        </span>
+
+                        <strong>
+                            Alessandro
+                        </strong>
+
+                        <small>
+                            Seleccionar
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="tarjeta-persona"
+                        data-persona="Mery"
+                    >
+
+                        <span class="persona-emoji">
+                            👩
+                        </span>
+
+                        <strong>
+                            Mery
+                        </strong>
+
+                        <small>
+                            Seleccionar
+                        </small>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VOTACIÓN -->
+
+        <section
+            id="seccionVotacionHijo"
+            class="panel-seccion oculto"
+        >
+
+            <div class="hijo-seleccionado">
+
+                <div>
+
+                    <span id="emojiPersonaActual">
+                        👤
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Estás votando como
+                        </small>
+
+                        <strong id="nombrePersonaActual">
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="btnCambiarPersona"
+                    class="btn-secundario"
+                >
+                    Cambiar
+                </button>
+
+            </div>
+
+
+            <div id="estadoVotacion">
+
+                <div class="estado-vacio">
+
+                    <span>⏳</span>
+
+                    <h3>
+                        Buscando votación...
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="listaVotacion"
+                class="lista-votacion"
+            ></div>
+
+
+            <!-- VOTO REALIZADO -->
+
+            <div
+                id="mensajeVotoRealizado"
+                class="voto-realizado oculto"
+            >
+
+                <div class="check-voto">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        ¡Tu voto fue registrado!
+                    </strong>
+
+                    <p id="platoVotado"></p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULTADOS -->
+
+            <div
+                id="contenedorResultados"
+                class="resultados-contenedor oculto"
+            >
+
+                <div class="separador"></div>
+
+
+                <div class="titulo-resultados">
+
+                    <div>
+
+                        <p class="panel-mini">
+                            RESULTADOS
+                        </p>
+
+                        <h2>
+                            📊 Así va la votación
+                        </h2>
+
+                    </div>
+
+
+                    <div
+                        id="totalVotos"
+                        class="total-votos"
+                    >
+                        0 votos
+                    </div>
+
+                </div>
+
+
+                <div id="listaResultados"></div>
+
+            </div>
+
+        </section>
+
+
+        <a
+            href="index.html"
+            class="volver"
+        >
+            ← Volver al inicio
+        </a>
+
+    </div>
+
+</main>
+
+
+<!-- CONFIRMAR VOTO -->
+
+<div
+    id="modalVoto"
+    class="modal oculto"
+>
+
+    <div class="modal-contenido">
+
+        <div class="modal-icono">
+            🗳️
+        </div>
+
+        <h2>
+            ¿Confirmas tu voto?
+        </h2>
+
+
+        <p id="textoConfirmacionPersona">
+            Estás votando por:
+        </p>
+
+
+        <h3
+            id="nombrePlatoConfirmar"
+            class="plato-confirmacion"
+        ></h3>
+
+
+        <p class="modal-advertencia">
+            Después de confirmar no podrás cambiar tu voto.
+        </p>
+
+
+        <div class="modal-botones">
+
+            <button
+                id="btnCancelarVoto"
+                class="btn-secundario"
+            >
+                Cancelar
+            </button>
+
+
+            <button
+                id="btnConfirmarVoto"
+                class="btn-confirmar-voto"
+            >
+                Confirmar voto
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+<script src="js/supabase.js"></script>
+<script src="js/votar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Panel de mamá</title>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+</head>
+
+<body>
+
+<main class="panel">
+
+    <div class="panel-contenedor">
+
+
+        <!-- CABECERA -->
+
+        <div class="panel-header">
+
+            <div>
+
+                <p class="panel-mini">
+                    PANEL DE ADMINISTRACIÓN
+                </p>
+
+                <h1>
+                    👩‍🍳 Hola, mamá
+                </h1>
+
+                <p>
+                    Prepara las opciones para la votación familiar.
+                </p>
+
+            </div>
+
+
+            <button
+                id="btnCerrarSesion"
+                class="btn-secundario"
+            >
+                Cerrar sesión
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- PLATOS                    -->
+        <!-- ========================= -->
+
+        <section class="panel-seccion">
+
+            <div class="titulo-seccion">
+
+                <div>
+
+                    <h2>
+                        🍽️ Mis platos
+                    </h2>
+
+                    <p>
+                        Administra los platos disponibles.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="btnMostrarFormulario"
+                    class="btn-principal btn-nuevo"
+                >
+                    + Agregar plato
+                </button>
+
+            </div>
+
+
+            <!-- FORMULARIO -->
+
+            <div
+                id="contenedorFormulario"
+                class="form-plato-contenedor oculto"
+            >
+
+                <h3 id="tituloFormulario">
+                    🍲 Nuevo plato
+                </h3>
+
+
+                <form id="formPlato">
+
+                    <input
+                        type="hidden"
+                        id="platoId"
+                    >
+
+
+                    <div class="campo">
+
+                        <label for="nombrePlato">
+                            Nombre del plato
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombrePlato"
+                            placeholder="Ej: Lomo saltado"
+                            maxlength="80"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="descripcionPlato">
+                            Descripción
+                        </label>
+
+                        <textarea
+                            id="descripcionPlato"
+                            placeholder="Ej: Con arroz y papas fritas"
+                            maxlength="200"
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="acciones-formulario">
+
+                        <button
+                            type="button"
+                            id="btnCancelar"
+                            class="btn-secundario"
+                        >
+                            Cancelar
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            id="btnGuardarPlato"
+                            class="btn-principal"
+                        >
+                            Guardar plato
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <p id="mensajePlato"></p>
+
+            </div>
+
+
+            <div id="listaPlatos">
+
+                <div class="estado-vacio">
+
+                    <span>⏳</span>
+
+                    <h3>
+                        Cargando platos...
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- CREAR VOTACIÓN            -->
+        <!-- ========================= -->
+
+        <section class="panel-seccion seccion-votacion">
+
+            <div class="cabecera-votacion">
+
+                <div>
+
+                    <p class="panel-mini">
+                        VOTACIÓN DEL DÍA
+                    </p>
+
+                    <h2>
+                        🗳️ ¿Qué cocinamos hoy?
+                    </h2>
+
+                    <p>
+                        Selecciona los platos que podrán votar.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="selectorPlatos"
+                class="selector-platos"
+            >
+
+                <div class="estado-vacio">
+
+                    <span>🍽️</span>
+
+                    <p>
+                        Cargando platos...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="btnIniciarVotacion"
+                class="btn-iniciar-votacion"
+            >
+                🗳️ Iniciar votación
+            </button>
+
+
+            <p id="mensajeVotacion"></p>
+
+
+            <!-- VOTACIÓN ACTIVA -->
+
+            <div
+                id="votacionActiva"
+                class="votacion-activa oculto"
+            >
+
+                <div class="votacion-activa-icono">
+                    🟢
+                </div>
+
+                <div>
+
+                    <strong>
+                        Hay una votación activa
+                    </strong>
+
+                    <p>
+                        Tu familia ya puede votar.
+                    </p>
+
+                </div>
+
+            </div>
+
+                <!-- CONTROL DE VOTACIÓN -->
+
+    <div
+        id="controlVotacion"
+        class="control-votacion oculto"
+    >
+
+        <div class="separador"></div>
+
+        <div class="titulo-resultados">
+
+            <div>
+                <p class="panel-mini">
+                    RESULTADOS EN VIVO
+                </p>
+
+                <h2>
+                    📊 Votos actuales
+                </h2>
+            </div>
+
+            <div
+                id="totalVotosMama"
+                class="total-votos"
+            >
+                0 votos
+            </div>
+
+        </div>
+
+
+        <div class="estado-familia">
+
+            <p class="panel-mini">
+                ¿QUIÉNES YA VOTARON?
+            </p>
+
+            <div id="estadoVotantes"></div>
+
+        </div>
+        
+        <div id="resultadosMama"></div>
+
+
+        <button
+            id="btnCerrarVotacion"
+            class="btn-cerrar-votacion"
+        >
+            🔒 Cerrar votación
+        </button>
+
+    </div>
+
+
+    <!-- RESULTADO FINAL -->
+
+    <div
+        id="resultadoFinal"
+        class="resultado-final oculto"
+    >
+
+        <div id="contenidoResultadoFinal"></div>
+
+
+        <button
+            id="btnNuevaVotacion"
+            class="btn-nueva-votacion oculto"
+        >
+            🔄 Nueva votación
+        </button>
+
+    </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+
+<!-- ============================= -->
+<!-- MODAL ELIMINAR                -->
+<!-- ============================= -->
+
+<div
+    id="modalEliminar"
+    class="modal oculto"
+>
+
+    <div class="modal-contenido">
+
+        <div class="modal-icono">
+            🗑️
+        </div>
+
+        <h2>
+            ¿Eliminar plato?
+        </h2>
+
+        <p>
+
+            Estás a punto de eliminar
+
+            <strong id="nombreEliminar"></strong>.
+
+        </p>
+
+
+        <p class="modal-advertencia">
+            Esta acción no se puede deshacer.
+        </p>
+
+
+        <div class="modal-botones">
+
+            <button
+                id="btnCancelarEliminar"
+                class="btn-secundario"
+            >
+                Cancelar
+            </button>
+
+
+            <button
+                id="btnConfirmarEliminar"
+                class="btn-eliminar"
+            >
+                Sí, eliminar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+<script src="js/supabase.js"></script>
+
+<script src="js/mama.js"></script>
+
+</body>
+
+</html>
